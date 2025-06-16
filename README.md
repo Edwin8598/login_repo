@@ -12,8 +12,7 @@ Cambio de contraseña: nueva_clave.html
 
 ## 📁 Estructura del Proyecto
 
-/ (raíz del proyecto)
-│
+/ 
 ├── index.html           # Página principal de inicio de sesión
 ├── login.html           # Formulario de registro de usuario
 ├── recuperar.html       # Página para recuperar contraseña
