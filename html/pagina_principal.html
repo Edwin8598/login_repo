@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cafetería Cultural</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      background: url('https://images.unsplash.com/photo-1511920170033-f8396924c348') no-repeat center center;
+      background-size: cover;
+      height: 60vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 5px #000;
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Café Cultural</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
+          <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero text-center">
+    <div>
+      <h1 class="display-4">Bienvenidos a Café Cultural</h1>
+      <p class="lead">Un espacio para el café, el arte y la comunidad</p>
+    </div>
+  </div>
+
+  <!-- Menú -->
+  <section id="menu" class="container my-5">
+    <h2 class="text-center mb-4">Nuestro Menú</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Bebidas</h4>
+        <p><strong>Café Americano</strong> - $3.000</p>
+        <p><strong>Capuchino</strong> - $4.000</p>
+        <p><strong>Té de hierbas</strong> - $2.500</p>
+        <p><strong>Chocolate caliente</strong> - $3.500</p>
+      </div>
+      <div class="col-md-6">
+        <h4>Snacks</h4>
+        <p><strong>Torta de zanahoria</strong> - $4.500</p>
+        <p><strong>Empanada artesanal</strong> - $3.000</p>
+        <p><strong>Galletas caseras</strong> - $2.000</p>
+        <p><strong>Sandwich vegetariano</strong> - $5.000</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo con Categorías -->
+  <section id="catalogo" class="container my-5">
+    <h2 class="text-center mb-4">Catálogo de Productos</h2>
+
+    <div class="accordion" id="catalogoAccordion">
+      <!-- Categoría: Café -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCafe">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCafe">
+            Café
+          </button>
+        </h2>
+        <div id="collapseCafe" class="accordion-collapse collapse show" data-bs-parent="#catalogoAccordion">
+          <div class="accordion-body row g-3">
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" class="card-img-top" alt="Café en grano">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Café en grano 500g</h5>
+                  <p>$12.000</p>
+                  <button class="btn btn-primary" onclick="agregarProducto('Café en grano')">Agregar al pedido</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categoría: Accesorios -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAccesorios">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccesorios">
+            Accesorios
+          </button>
+        </h2>
+        <div id="collapseAccesorios" class="accordion-collapse collapse" data-bs-parent="#catalogoAccordion">
+          <div class="accordion-body row g-3">
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2" class="card-img-top" alt="Taza personalizada">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Taza personalizada</h5>
+                  <p>$8.000</p>
+                  <button class="btn btn-primary" onclick="agregarProducto('Taza personalizada')">Agregar al pedido</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categoría: Libros -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingLibros">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLibros">
+            Libros
+          </button>
+        </h2>
+        <div id="collapseLibros" class="accordion-collapse collapse" data-bs-parent="#catalogoAccordion">
+          <div class="accordion-body row g-3">
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1603398031073-30a2f1a5b8b8" class="card-img-top" alt="Libro de poesía">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Libro de poesía</h5>
+                  <p>$15.000</p>
+                  <button class="btn btn-primary" onclick="agregarProducto('Libro de poesía')">Agregar al pedido</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Nosotros -->
+  <section id="nosotros" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Sobre Nosotros</h2>
+      <p class="text-center">Somos un rincón cultural en el corazón de la ciudad. Nuestro café no solo ofrece sabores artesanales, sino también un espacio para exposiciones, lecturas de poesía y música en vivo. Ven a compartir cultura y comunidad.</p>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="container my-5">
+    <h2 class="text-center mb-4">Contáctanos</h2>
+    <p class="text-center">📍 Calle 123, Barrio Centro | ☎️ (123) 456-7890 | 📧 contacto@cafecultural.com</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Café Cultural. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function agregarProducto(nombre) {
+      alert(`Has agregado "${nombre}" a tu pedido.`);
+    }
+  </script>
+</body>
+</html>
+
+
