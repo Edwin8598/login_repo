@@ -11,8 +11,7 @@ Recuperación de contraseña: recuperar.html
 Cambio de contraseña: nueva_clave.html
 
 ## 📁 Estructura del Proyecto
-python
-Copiar código
+
 / (raíz del proyecto)
 │
 ├── index.html           # Página principal de inicio de sesión
