@@ -1,44 +1,45 @@
-Sistema de Autenticación Web 🛡️
-Este proyecto es un sistema básico de autenticación de usuarios, desarrollado en HTML y Bootstrap, que incluye funcionalidades de inicio de sesión, registro de nuevos usuarios y recuperación de contraseña.
+# Proyecto de Formularios con Bootstrap
 
-## 🔧 Funcionalidades
-Inicio de sesión: index.html
+## 🎯 Finalidad del Proyecto
 
-Registro de usuarios: login.html
+Este proyecto tiene como objetivo implementar una interfaz básica de autenticación de usuarios, incluyendo las funcionalidades de:
+- Inicio de sesión
+- Registro de nuevos usuarios
+- Recuperación de contraseña
+- Generación de nueva clave
 
-Recuperación de contraseña: recuperar.html
+Está orientado a servir como base para sistemas más complejos de autenticación y gestión de usuarios en aplicaciones web.
 
-Cambio de contraseña: nueva_clave.html
+
+---
 
 ## 📁 Estructura del Proyecto
 
-/ 
-├── index.html           # Página principal de inicio de sesión
-├── login.html           # Formulario de registro de usuario
-├── recuperar.html       # Página para recuperar contraseña
-├── nueva_clave.html     # Página para establecer nueva contraseña
-└── js/
-    ├── login.js         # Lógica para autenticación (no incluido pero referenciado)
-    └── aprender.js      # Archivo adicional JS (no incluido pero referenciado)
-## 💡 Tecnologías Utilizadas
-HTML5
+```plaintext
+/
+├── index.html                # Página principal de Login
+├── html/
+│   ├── login.html         # Formulario para registrar usuarios nuevos
+│   ├── recuperar.html        # Vista para recuperación de contraseña
+│   └── nueva_clave.html # Vista principal para usuario logueado
+    └── pagina.principal
+├── css/
+│   └── estilos.css           # Hoja de estilos externa común a todas las páginas
+├── js/
+    ├── login.js              # Script que contiene lógica del login
+    └── aprender.js          # Script que contiene lógica para recuperar contraseña
+```
 
-Bootstrap 5.3
+---
 
-SweetAlert2 para alertas interactivas
+## 🛠️ Tecnologías Utilizadas
 
-## 🔐 Lógica Básica
-El formulario de registro recoge datos personales y credenciales.
+| Tecnología        | Logo                                                                 | Descripción                                                                 |
+|------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| **HTML5**        | ![HTML5](https://img.icons8.com/color/48/html-5--v1.png)              | Lenguaje de marcado usado para estructurar las páginas web.                |
+| **CSS3**         | ![CSS3](https://img.icons8.com/color/48/css3.png)                     | Hojas de estilo para personalizar la apariencia de la web.                 |
+| **Bootstrap 5**  | ![Bootstrap](https://img.icons8.com/color/48/bootstrap.png)           | Framework CSS para facilitar el diseño responsive y atractivo.             |
+| **JavaScript**   | ![JS](https://img.icons8.com/color/48/javascript--v1.png)             | Se utiliza para validaciones y lógica interactiva.                         |
+| **EmailJS**      | ![EmailJS](https://img.icons8.com/fluency/48/send-mass-email.png)     | Servicio para enviar correos desde el frontend sin necesidad de backend.   |
 
-El usuario puede iniciar sesión desde index.html.
-
-En caso de olvido, se puede recuperar contraseña, lo que redirige a nueva_clave.html.
-
-Validaciones básicas están implementadas en JavaScript, como coincidencia de contraseñas y confirmaciones visuales.
-
-## 🚩 Notas Importantes
-Este proyecto es 100% frontend. No guarda datos ni realiza peticiones a servidores o bases de datos.
-
-Los scripts login.js y aprender.js están enlazados pero no fueron proporcionados, por lo que algunas funciones pueden estar incompletas.
-
-Ideal como plantilla o práctica para proyectos educativos o prototipos.
+---
