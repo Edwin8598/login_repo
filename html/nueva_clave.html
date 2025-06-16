@@ -27,34 +27,37 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script>
-    document.getElementById("nuevaClaveForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const pass = document.getElementById("nuevaClave").value;
-      const confirm = document.getElementById("confirmarClave").value;
+<script>
+  document.getElementById("nuevaClaveForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const pass = document.getElementById("nuevaClave").value;
+    const confirm = document.getElementById("confirmarClave").value;
 
-      if (pass !== confirm) {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "Las contraseñas no coinciden."
-        });
-        return;
-      }
-
-      // Mensaje de éxito y redirección al login
+    if (pass !== confirm) {
       Swal.fire({
-        icon: "success",
-        title: "Contraseña actualizada",
-        text: "Ya puedes iniciar sesión con tu nueva contraseña.",
-        confirmButtonText: "OK"
-      }).then((result) => {
-        if (result.isConfirmed) {
-          window.location.href = "../index.html";
-        }
+        icon: "error",
+        title: "Error",
+        text: "Las contraseñas no coinciden."
       });
+      return;
+    }
+
+    // Mensaje de éxito sin botón y redirección automática
+    Swal.fire({
+      icon: "success",
+      title: "Contraseña actualizada",
+      text: "Redirigiendo al inicio de sesión...",
+      showConfirmButton: false,
+      timer: 2000, // espera 2 segundos
+      timerProgressBar: true
     });
-  </script>
+
+    setTimeout(() => {
+      window.location.href = "../index.html";
+    }, 2000);
+  });
+</script>
+
 </body>
 </html>
 
